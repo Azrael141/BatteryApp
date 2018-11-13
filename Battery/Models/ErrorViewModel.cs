@@ -1,5 +1,3 @@
-using System;
-
 namespace Battery.Models
 {
     public class ErrorViewModel
