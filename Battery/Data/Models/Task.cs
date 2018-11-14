@@ -7,7 +7,7 @@ namespace Battery.Data.Models
 {
     public class Task : BaseEntity
     {
-        [Required]
+        [Required(AllowEmptyStrings = false)]
         public string Name { get; set; }
         [Column(TypeName = "datetime2")]
         public DateTime DtCreate { get; set; }
@@ -15,6 +15,7 @@ namespace Battery.Data.Models
         public DateTime? DtStart { get; set; }
         [Column(TypeName = "datetime2")]
         public DateTime? DtFinish { get; set; }
+        [Required(AllowEmptyStrings = false)]
         public string Description { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal Cost { get; set; }
